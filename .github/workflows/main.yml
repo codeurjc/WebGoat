@@ -29,7 +29,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd webgoat-server
-          docker build --build-arg webgoat_version=v8.1.0 -t webgoat/webgoat:8.1.0
+          docker build --build-arg webgoat_version=v8.1.0 -t webgoat/webgoat:8.1.0 .
           docker run -d --name webgoat webgoat/webgoat:8.1.0
           
       - name: OWASP ZAP Full Scan
